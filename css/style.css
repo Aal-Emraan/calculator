@@ -1,0 +1,8 @@
+#calculator-wrapper{
+    min-width: 25rem;
+}
+
+#calculator-wrapper div{
+    background-color:red;
+    margin:0;
+}

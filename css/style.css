@@ -1,5 +1,6 @@
 #calculator-wrapper{
     min-width: 25rem;
+    box-shadow:0 0 5px gray, inset 0 0 5px rebeccapurple;
 }
 
 #calculator-wrapper div{
@@ -9,4 +10,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: inset 0 0 5px cornflowerblue;
+}
+
+#calculator-wrapper div:first-child{
+    height:6rem;
+    margin-bottom: -2rem;
+    background: rgb(119, 119, 245);
+    justify-content: flex-end;
+    padding-right: 20px;
+    font-size: 30px;
+}
+
+#calculator-wrapper div:not(:first-child):hover{
+    background: rgb(95, 118, 247);
+}
+
+#firstInput, #operator{
+    display: none;
+}
+
+#buttonDisplay2{
+    background: red;
 }

@@ -76,6 +76,23 @@ document.getElementById('buttonDevide').addEventListener('click',function(){
     document.getElementById('operator').innerText = '/';
     document.getElementById('buttonDisplay').innerText = '';
 })
+document.getElementById('buttonPercent').addEventListener('click',function(){
+    const displayText = document.getElementById('buttonDisplay').innerText;
+    const firstInput = parseFloat(document.getElementById('firstInput').innerText);
+    const operator = document.getElementById('operator').innerText;
+    if(operator == '+'){
+        document.getElementById('buttonDisplay').innerText = firstInput + (firstInput/100) * parseFloat(displayText);
+    }
+    if(operator == '-'){
+        document.getElementById('buttonDisplay').innerText = firstInput - (firstInput/100) * parseFloat(displayText);
+    }
+    if(operator == '*'){
+        document.getElementById('buttonDisplay').innerText = firstInput * (firstInput/100) * parseFloat(displayText);
+    }
+    if(operator == '/'){
+        document.getElementById('buttonDisplay').innerText = firstInput / (firstInput/100) * parseFloat(displayText);
+    }
+})
 document.getElementById('buttonEqual').addEventListener('click',function(){
     const displayText = document.getElementById('buttonDisplay').innerText;
     const firstInput = parseFloat(document.getElementById('firstInput').innerText);

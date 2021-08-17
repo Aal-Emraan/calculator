@@ -3,6 +3,10 @@
 }
 
 #calculator-wrapper div{
-    background-color:red;
+    background: rgb(165, 193, 247);
     margin:0;
+    border-radius: 10q;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

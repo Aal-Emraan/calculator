@@ -55,26 +55,45 @@ document.getElementById('buttonDot').addEventListener('click',function(){
 document.getElementById('buttonPlus').addEventListener('click',function(){
     const displayText = document.getElementById('buttonDisplay').innerText;
     document.getElementById('firstInput').innerText = displayText;
+    document.getElementById('operator').innerText = '+';
     document.getElementById('buttonDisplay').innerText = '';
 })
 document.getElementById('buttonMinus').addEventListener('click',function(){
     const displayText = document.getElementById('buttonDisplay').innerText;
-    document.getElementById('buttonDisplay').innerText = displayText + getNumber('buttonMinus');
+    document.getElementById('firstInput').innerText = displayText;
+    document.getElementById('operator').innerText = '-';
+    document.getElementById('buttonDisplay').innerText = '';
 })
 document.getElementById('buttonMultiply').addEventListener('click',function(){
     const displayText = document.getElementById('buttonDisplay').innerText;
-    document.getElementById('buttonDisplay').innerText = displayText + getNumber('buttonMultiply');
+    document.getElementById('firstInput').innerText = displayText;
+    document.getElementById('operator').innerText = '*';
+    document.getElementById('buttonDisplay').innerText = '';
 })
 document.getElementById('buttonDevide').addEventListener('click',function(){
     const displayText = document.getElementById('buttonDisplay').innerText;
-    document.getElementById('buttonDisplay').innerText = displayText + getNumber('buttonDevide');
+    document.getElementById('firstInput').innerText = displayText;
+    document.getElementById('operator').innerText = '/';
+    document.getElementById('buttonDisplay').innerText = '';
 })
 document.getElementById('buttonEqual').addEventListener('click',function(){
     const displayText = document.getElementById('buttonDisplay').innerText;
-    const secondInput = parseFloat(document.getElementById('firstInput').innerText);
-    document.getElementById('buttonDisplay').innerText = parseFloat(displayText) + secondInput;
+    const firstInput = parseFloat(document.getElementById('firstInput').innerText);
+    const operator = document.getElementById('operator').innerText;
+    if(operator == '+'){
+        document.getElementById('buttonDisplay').innerText = firstInput + parseFloat(displayText);
+    }
+    if(operator == '-'){
+        document.getElementById('buttonDisplay').innerText = firstInput - parseFloat(displayText);
+    }
+    if(operator == '*'){
+        document.getElementById('buttonDisplay').innerText = firstInput * parseFloat(displayText);
+    }
+    if(operator == '/'){
+        document.getElementById('buttonDisplay').innerText = firstInput / parseFloat(displayText);
+    }
 })
 document.getElementById('buttonClear').addEventListener('click',function(){
-    const displayText = document.getElementById('buttonDisplay').innerText;
     document.getElementById('buttonDisplay').innerText = '';
+    document.getElementById('firstInput').innerText = '';
 })

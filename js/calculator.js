@@ -1,12 +1,12 @@
 // global variables
 const displayText = document.getElementById('buttonDisplay').innerText;
 
+
+
 function getNumber(id){
     const number = document.getElementById(id).innerText;
     return number;
 }
-
-
 
 document.getElementById('button9').addEventListener('click',function(){
     const displayText = document.getElementById('buttonDisplay').innerText;
@@ -51,6 +51,28 @@ document.getElementById('button0').addEventListener('click',function(){
 document.getElementById('buttonDot').addEventListener('click',function(){
     const displayText = document.getElementById('buttonDisplay').innerText;
     document.getElementById('buttonDisplay').innerText = displayText + getNumber('buttonDot');
+})
+document.getElementById('buttonPlus').addEventListener('click',function(){
+    const displayText = document.getElementById('buttonDisplay').innerText;
+    document.getElementById('firstInput').innerText = displayText;
+    document.getElementById('buttonDisplay').innerText = '';
+})
+document.getElementById('buttonMinus').addEventListener('click',function(){
+    const displayText = document.getElementById('buttonDisplay').innerText;
+    document.getElementById('buttonDisplay').innerText = displayText + getNumber('buttonMinus');
+})
+document.getElementById('buttonMultiply').addEventListener('click',function(){
+    const displayText = document.getElementById('buttonDisplay').innerText;
+    document.getElementById('buttonDisplay').innerText = displayText + getNumber('buttonMultiply');
+})
+document.getElementById('buttonDevide').addEventListener('click',function(){
+    const displayText = document.getElementById('buttonDisplay').innerText;
+    document.getElementById('buttonDisplay').innerText = displayText + getNumber('buttonDevide');
+})
+document.getElementById('buttonEqual').addEventListener('click',function(){
+    const displayText = document.getElementById('buttonDisplay').innerText;
+    const secondInput = parseFloat(document.getElementById('firstInput').innerText);
+    document.getElementById('buttonDisplay').innerText = parseFloat(displayText) + secondInput;
 })
 document.getElementById('buttonClear').addEventListener('click',function(){
     const displayText = document.getElementById('buttonDisplay').innerText;
